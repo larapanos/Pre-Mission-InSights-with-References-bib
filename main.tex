@@ -1,0 +1,173 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16 
+%
+% Copy it to a new filxe with a new name and use it as the basis
+% for your article. Delete % signs as needed. 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\RequirePackage{fix-cm} 
+%
+%\documentclass[referee,natbib]{svjour3}
+                     % onecolumn (standard format)
+\documentclass[natbib]{svjour3}
+
+\smartqed % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{lineno}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[version=3]{mhchem}
+\usepackage{array}
+\usepackage{subfig}
+\usepackage{subfloat}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{natbib}
+\usepackage{latexsym}
+\usepackage{authblk}
+\usepackage{upquote,textcomp}
+
+\newcommand\Mark[1]{\textsuperscript#1}
+
+\definecolor{revision}{rgb}{0.0,0.0,1.0}
+%\definecolor{revision}{rgb}{0.0,0.0,0.0} % use this to remove color
+\newcommand{\revision}[1]{{\color{revision} {#1}}} % track changes: add new text
+
+% \usepackage{mathptmx}% use Times fonts if available on your TeX system
+% * <lara.panossian@jpl.nasa.gov> 2018-04-19T16:29:28.216Z:
+%
+% ^.
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% * <lara.panossian@jpl.nasa.gov> 2018-04-16T12:49:56.811Z:
+%
+% ^.
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+ \journalname{Space Science Reviews}
+%
+
+\begin{document}
+
+\title{Pre-Mission InSights on the Interior of Mars}
+\titlerunning{Pre-Mission InSights on the Interior of Mars}        % if too long for running head
+\authorrunning{Smrekar et al.} % if too long for running head
+
+\input{paper/authors.tex} 
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+\maketitle
+
+  
+\begin{abstract}
+The Interior exploration using Seismic Investigations, Geodesy, and Heat Transport (InSight) Mission will focus on Mars' interior structure and evolution.  The basic structure of crust, mantle, and core form soon after accretion.  Understanding the early differentiation process on Mars and how it relates to bulk composition is key to improving our understanding of this process on rocky bodies in our solar system, as well as in other solar systems.  Current knowledge of differentiation derives largely from the layers observed via seismology on the Moon.  However, the Moon's much smaller diameter make it a poor analog with respect to interior pressure and phase changes.  In this paper we review the current knowledge of the thickness of the crust, the diameter and state of the core, seismic attenuation, heat flow, and interior composition. InSight will conduct the first seismic and heat flow measurements of Mars, as well as more precise geodesy.  These data reduce uncertainty in crustal thickness, core size and state, heat flow, seismic activity and meteorite impact rates by a factor of 3-10X relative to previous estimates.  Based on modeling of seismic wave propagation, we can further constrain interior temperature, composition, and the location of phase changes.  By combining heat flow and a well constrained value of crustal thickness, we can estimate the distribution of heat producing elements between the crust and mantle. All of these quantities are key inputs to models of interior convection and thermal evolution that predict the processes that control subsurface temperature, rates of volcanism, plume distribution and stability, and convective state.  Collectively these factors offer strong controls on the overall evolution of the geology and habitability of Mars.
+\end{abstract}
+
+{\keywords{Mars \and InSight \and Interior \and seismology \and heat flow \and geodesy \and crust \and mantle \and core}}
+
+
+\newpage
+\section{Introduction \label{sec:introduction}}\input{paper/1_Sue_Introduction.tex}
+\newpage
+\section{Available Constraints on the Martian Interior \label{sec:constraints}}\input{paper/2_Sue_Constraints.tex}
+\newpage
+\section{Models of the Interior \label{sec:models}}\input{paper/3_1Tilman_ThermalHistory.tex}
+\newpage
+\subsection{{Interior structure and composition\label{sec:interior}}}\input{paper/3_2Philippe_InteriorStructure.tex}
+\newpage
+\subsection{Reference Models \label{sec:models}}\input{paper/3_3Philippe_RefModels.tex}
+\newpage
+\section{Summary\label{sec:summary}}\input{paper/4_Bruce_Summary.tex}
+
+\textbf{Acknowledgements}
+ 
+A portion of the work was supported by the InSight Project at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration
+
+\bibliographystyle{aps-nameyear}
+\bibliography{InSight_Refs}
+
+
+
+%\section{Introduction}
+%\label{intro}
+%Your text comes here. Separate text sections with
+%\section{Section title}
+%\label{sec:1}
+%Text with citations \cite{RefB} and \cite{RefJ}.
+%\subsection{Subsection title}
+%\label{sec:2}
+%as required. Don't forget to give each section
+%and subsection a unique label (see Sect.~\ref{sec:1}).
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+%\begin{equation}
+%a^2+b^2=c^2
+%\end{equation}
+%
+%% For one-column wide figures use
+%\begin{figure}
+%% Use the relevant command to insert your figure file.
+%% For example, with the graphicx package use
+%  \includegraphics{example.eps}
+%% figure caption is below the figure
+%\caption{Please write your figure caption here}
+%\label{fig:1}       % Give a unique label
+%\end{figure}
+%%
+%% For two-column wide figures use
+%\begin{figure*}
+%% Use the relevant command to insert your figure file.
+%% For example, with the graphicx package use
+%  \includegraphics[width=0.75\textwidth]{example.eps}
+%% figure caption is below the figure
+%\caption{Please write your figure caption here}
+%\label{fig:2}       % Give a unique label
+%\end{figure*}
+%%
+%% For tables use
+%\begin{table}
+%% table caption is above the table
+%\caption{Please write your table caption here}
+%\label{tab:1}       % Give a unique label
+%% For LaTeX tables use
+%\begin{tabular}{lll}
+%\hline\noalign{\smallskip}
+%first & second & third  \\
+%\noalign{\smallskip}\hline\noalign{\smallskip}
+%number & number & number \\
+%number & number & number \\
+%\noalign{\smallskip}\hline
+%\end{tabular}
+%\end{table}
+
+%\begin{figure}\sidecaption
+%\resizebox{0.3\hsize}{!}{\includegraphics*{figure.eps}}
+%\caption{A figure}
+%\end{figure}
+
+%\begin{acknowledgements}
+%If you'd like to thank anyone,place your comments here
+%and remove the percent signs.
+%\end{acknowledgements}
+
+
+
+
+
+
+\end{document}
+
+
